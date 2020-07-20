@@ -1,2 +1,7 @@
-# nqueens
-N-Queens solver
+# Introduction
+
+# Design
+
+# Installation Steps
+
+# Running
