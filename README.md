@@ -1,0 +1,2 @@
+# nqueens
+N-Queens solver
