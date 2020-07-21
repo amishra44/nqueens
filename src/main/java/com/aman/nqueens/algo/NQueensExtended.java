@@ -30,8 +30,8 @@ public class NQueensExtended extends NQueensClassic {
 		}
 
 		// Verify new rule (If there are 3 queens - queen1, queen2 and queen3,
-		// then, slope of line between queen1 and queen2 should be same as
-		// slope of line between queen1 and queen3)
+		// then, slope of line passing through queen1 and queen2 should be same
+		// as slope of line passing through queen1 and queen3)
 		for(int i = 1; i <= row; i++) {
 			for(int j = i + 1; j <= row; j++) {
 				if(j * (col - board[row - i]) == i * (col - board[row - j])) {

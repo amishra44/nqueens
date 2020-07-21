@@ -6,10 +6,32 @@ import com.aman.nqueens.algo.NQueensExtended;
 import com.aman.nqueens.algo.NQueensSolver;
 import com.aman.nqueens.algo.NQueensThreadedSolver;
 
+/**
+ * Main program to solve the N-Queens problem. Solves two types of N-Queens
+ * problem:<br>
+ * <ul>
+ *     <li> Classic N-Queens problem - No two queens intersect vertically,
+ *          horizontally and diagonally.
+ *     <li> Extended N-Queens problem - Respects classic rule. Additionally,
+ *          no three queens are on a straight line (at any angle).
+ * </ul>
+ * Solves the extended problem as default. User can request to solve the
+ * classic problem using a command line flag.<br><br>
+ * It can use multiple threads to navigate the search space faster. Currently,
+ * all concurrent searches are rooted at a cell on the first row. Uses a single
+ * thread as default. User can provides the number of threads using a command
+ * line argument.
+ * @author amanm
+ */
 public class NQueensRunner {
+	/**
+	 * Main method that is invoked by JVM.
+	 * @param args Command line arguments
+	 */
 	public static void main(String[] args) {
 		NQueensParameters params = NQueensParameters.parse(args);
 		
+		// Solve classic or extended problem
 		if(params.isClassic()) {
 			solveClassic(params.getSize(), params.getNumThreads());
 		} else {

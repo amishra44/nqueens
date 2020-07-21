@@ -17,16 +17,15 @@ public abstract class AbstractNQueens implements NQueens {
 	
 	/**
 	 * Find a valid placement of queens, starting from first row and given
-	 * column. If a search is unsuccessful, restart search from first row and
-	 * next column at a distance of &lt;incrementCol&gt; from the current
-	 * column where last search was started in first row. 
+	 * column. If a search is unsuccessful, start search from first row and
+	 * next column at a given distance from the column in first row where last
+	 * search was started. 
 	 * @param startCol Start column in first row
 	 * @param incrementCol Distance of next column to start search 
-	 * @param done <code>AtomicBoolean</code> flag to track if a solution
-	 *     has been found.
+	 * @param done Flag to track if a solution has been found.
 	 * @return Array representing the cells where queens are placed on the
-	 *     board, with column number of placed queen as value in each array
-	 *     element with row number as index.
+	 * board, with column number of placed queen as value in each array
+	 * element with row number as index.
 	 */
 	public int[] place(int startCol, int incrementCol, AtomicBoolean done) {
 		int[] board = new int[n];
@@ -110,7 +109,8 @@ public abstract class AbstractNQueens implements NQueens {
 	
 	/**
 	 * Abstract method to verify a placement of queen in a row and column
-	 * (cell).
+	 * (cell). Classes that extend this class should provide an implementation
+	 * of this method as per the respective rules.
 	 * @param board Array representing the cells where queens are placed on the
 	 *     board, with column number of placed queen as value in each array
 	 *     element with row number as index.

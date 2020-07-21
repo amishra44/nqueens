@@ -1,5 +1,9 @@
 package com.aman.nqueens.runner;
 
+/**
+ * Parses and stores command line arguments for N-Queens program.
+ * @author amanm
+ */
 public class NQueensParameters {
 	private String[] args;
 	private int size;
@@ -28,6 +32,12 @@ public class NQueensParameters {
 		return isClassic;
 	}
 	
+	/**
+	 * Parse and returns command line arguments for N-Queens program. If help
+	 * is requested or an incorrect argument is provided, prints the help.
+	 * @param args Command line arguments array.
+	 * @return Instance with stored parameters.
+	 */
 	public static NQueensParameters parse(String[] args) {
 		NQueensParameters params = new NQueensParameters();
 		params.args = args;

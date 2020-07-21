@@ -36,15 +36,18 @@ public class NQueensThreadedSolver implements NQueensSolver {
 			return board;
 		}
 
+		// Create threads
 		SolverThread[] threads = new SolverThread[numThreads];
 		for(int i = 0; i < numThreads; i++) {
 			threads[i] = new SolverThread(size, numThreads, i, done, nQueens);
 		}
 		
+		// Start threads
 		for(int i = 0; i < numThreads; i++) {
 			threads[i].start();
 		}
 		
+		// Wait for completion
 		for(int i = 0; i < numThreads; i++) {
 			try {
 				threads[i].join();
@@ -53,6 +56,7 @@ public class NQueensThreadedSolver implements NQueensSolver {
 			}
 		}
 		
+		// Read the solution
 		for(int i = 0; i < numThreads; i++) {
 			if(threads[i].board != null) {
 				board = threads[i].board;
