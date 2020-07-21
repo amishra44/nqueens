@@ -76,6 +76,8 @@ Alternatively you can directly run the executable jar:
 	    -threads <num-threads>      number of threads (for concurrent algorithm)
 	    -classic                    solve classic N-Queens
 
+## Examples
+
 Some examples are given below:
 
 Solve extended N-Queens problem for board size 8:
