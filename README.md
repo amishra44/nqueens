@@ -1,6 +1,6 @@
 # Introduction
 
-Program to solve the N-Queens problem for a given board size. Solves two types of N-Queens problem:
+Program to solve the N-Queens problem for a given board size. Solves two variants of N-Queens problem:
 
 * Classic N-Queens problem - No two queens intersect vertically, horizontally, and diagonally. 
 * Extended N-Queens problem - Respects classic rule. Additionally, no three queens are on a straight line (at any angle). 
@@ -48,7 +48,7 @@ Following are the pre-requisites for running N-Queens program:
 
 Checkout code using following command:
 
-`git clone git@github.com:amishra44/nqueens.git`
+`git clone https://github.com/amishra44/nqueens.git`
 
 Build code using following command:
 
