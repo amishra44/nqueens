@@ -19,7 +19,7 @@ import com.aman.nqueens.algo.NQueensThreadedSolver;
  * classic problem using a command line flag.<br><br>
  * It can use multiple threads to navigate the search space faster. Currently,
  * all concurrent searches are rooted at a cell on the first row. Uses a single
- * thread as default. User can provides the number of threads using a command
+ * thread as default. User can provide the number of threads using a command
  * line argument.
  * @author amanm
  */

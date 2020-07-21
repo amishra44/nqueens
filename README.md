@@ -2,12 +2,12 @@
 
 Program to solve the N-Queens problem for a given board size. Solves two types of N-Queens problem:
 
-* Classic N-Queens problem - No two queens intersect vertically, horizontally and diagonally. 
+* Classic N-Queens problem - No two queens intersect vertically, horizontally, and diagonally. 
 * Extended N-Queens problem - Respects classic rule. Additionally, no three queens are on a straight line (at any angle). 
 
 Solves the extended problem as default. User can request to solve the classic problem using a command line flag.
 
-It can use multiple threads to navigate the search space faster. Uses a single thread as default. User can provides the number of threads using a command line argument. Currently, all concurrent searches are rooted at a cell on the first row.
+It can use multiple threads to navigate the search space faster. Uses a single thread as default. User can provide the number of threads using a command line argument. Currently, all concurrent searches are rooted at a cell on the first row.
 
 This implementation currently solves N-Queens problem for board size in range 1 to 30 (both included), in a reasonable amount of time (less than 60 seconds) and space.
 
@@ -19,7 +19,7 @@ The design consists of following layers:
 
 * Runner - Main program that can be executed by user. Problem type, board size and number of threads can be passed as command line arguments.
 * Solver - Solves the N-Queens problem using given number of threads and a placement strategy.
-* Placement Strategy - Finds a valid placement for a particular problem type.
+* Placement Strategy - Finds a valid placement for a problem type.
 
 ## Implementation
 
@@ -68,7 +68,7 @@ Run the N-Queens program using following commands:
 	    -threads <num-threads>      number of threads (for concurrent algorithm)
 	    -classic                    solve classic N-Queens
 
-Alternatively you can directly run the executable jar:
+Alternatively, you can directly run the executable jar:
 
 	java -jar build/libs/nqueens.jar [options] <board-size>
 	Options:
