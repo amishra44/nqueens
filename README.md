@@ -48,53 +48,39 @@ Following are the pre-requisites for running N-Queens program:
 
 Checkout code using following command:
 
-`
-	git clone git@github.com:amishra44/nqueens.git
-`
+`git clone git@github.com:amishra44/nqueens.git`
 
 Build code using following command:
 
-`
-	gradle clean build
-`
+`gradle clean build`
 
 Build a jar using following command:
 
-`
-	gradle clean jar
-`
+`gradle clean jar`
 
 # Running
 
 Run the N-Queens program using following commands:
 
-`
 	gradle run --args="[options] <board-size>"
-	
-	Options:
-	    -help                       print this help and exit
-	    -threads <num-threads>      number of threads (for concurrent algorithm)
-	    -classic                    solve classic N-Queens	
-`
-
-Alternatively you can directly run the executable jar:
-
-`
-	java -jar build/libs/nqueens.jar [options] <board-size>
-	
 	Options:
 	    -help                       print this help and exit
 	    -threads <num-threads>      number of threads (for concurrent algorithm)
 	    -classic                    solve classic N-Queens
-`
+
+Alternatively you can directly run the executable jar:
+
+	java -jar build/libs/nqueens.jar [options] <board-size>
+	Options:
+	    -help                       print this help and exit
+	    -threads <num-threads>      number of threads (for concurrent algorithm)
+	    -classic                    solve classic N-Queens
 
 Some examples are given below:
 
 * Solve extended N-Queens problem for board size 8
 
-`
 	gradle run --args="8"
-	
 	Extended Solution:
 	Size: 8
 	Number of threads: 1
@@ -107,13 +93,10 @@ Some examples are given below:
 	. Q . . . . . .
 	. . . . . Q . .
 	Took 3 ms
-`
 
 * Solve classic N-Queens problem for board size 8
 
-`
 	java -jar build/libs/nqueens.jar -classic 8
-	
 	Classic Solution:
 	Size: 8
 	Number of threads: 1
@@ -126,13 +109,10 @@ Some examples are given below:
 	. Q . . . . . .
 	. . . Q . . . .
 	Took 2 ms
-`
 
 * Solve extended N-Queens problem for board size 8, using 2 threads
 
-`
 	gradle run --args="-threads 2 8"
-	
 	Extended Solution:
 	Size: 8
 	Number of threads: 2
@@ -145,7 +125,6 @@ Some examples are given below:
 	. . Q . . . . .
 	. . . . . Q . .
 	Took 3 ms
-`
 
 # Future
 
