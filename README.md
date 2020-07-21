@@ -78,7 +78,7 @@ Alternatively you can directly run the executable jar:
 
 Some examples are given below:
 
-* Solve extended N-Queens problem for board size 8
+Solve extended N-Queens problem for board size 8:
 
 	gradle run --args="8"
 	Extended Solution:
@@ -94,7 +94,7 @@ Some examples are given below:
 	. . . . . Q . .
 	Took 3 ms
 
-* Solve classic N-Queens problem for board size 8
+Solve classic N-Queens problem for board size 8:
 
 	java -jar build/libs/nqueens.jar -classic 8
 	Classic Solution:
@@ -110,7 +110,7 @@ Some examples are given below:
 	. . . Q . . . .
 	Took 2 ms
 
-* Solve extended N-Queens problem for board size 8, using 2 threads
+Solve extended N-Queens problem for board size 8, using 2 threads:
 
 	gradle run --args="-threads 2 8"
 	Extended Solution:
